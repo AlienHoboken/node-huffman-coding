@@ -24,11 +24,6 @@ function hexStrToBuffer(hexStr) {
   var hexArr = new Array();
   var tokens = hexStr.split(" ");
 
-  hexArr.push("0xFF");
-  hexArr.push("0xFF");
-  hexArr.push("0xFF");
-  hexArr.push("0xFF");
-
   //find all the hex octets until the second null byte
   var firstNullHit = false;
   for(var i=0; i < tokens.length && (tokens[i] != 0 || !firstNullHit); i++) {
